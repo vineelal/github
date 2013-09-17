@@ -1,25 +1,30 @@
 @border-color: 1px solid #e5e5e5;
 @muted-color: #808080;
-.padding(@top,@bottom){
+.padding(@top,@bottom) {
   padding-top: @top;
   padding-bottom: @bottom;
 }
+
 .padding-sides(@left:0px,@right:0px) {
   padding-left: @left;
   padding-right: @right;
 }
-.margin(@top:10px,@bottom:10px){
+
+.margin(@top:10px,@bottom:10px) {
   margin-top: @top;
   margin-bottom: @bottom;
 }
+
 .margin-sides(@left,@right) {
   margin-left: @left;
   margin-right: @right;
 }
-.font-style(@size,@weight){
+
+.font-style(@size,@weight) {
   font-size: @size;
   font-weight: @weight;
 }
+
 img {
   margin-right: 20px;
   float: left;
@@ -46,14 +51,13 @@ b {
   border-bottom: @border-color;
 }
 
-.navbar .navbar-inner .container > ul{
-    > li > a {
-      float: left;
-      color: black;
-      .padding(5px,5px);
-    }
+.navbar .navbar-inner .container > ul {
+  > li > a {
+    float: left;
+    color: black;
+    .padding(5px,5px);
   }
-
+}
 
 .container {
   width: 1000px;
@@ -93,9 +97,9 @@ input {
 }
 
 .main-content {
-  >.page-header {
-    >  .container {
-      >  .subscript {
+  .page-header {
+    .container {
+      .subscript {
         font-size: 12px;
         margin-left: 8px;
       }
@@ -107,13 +111,13 @@ input {
         .font-style(20px,normal);
         font-weight: normal;
       }
-      > .buttons {
+      .buttons {
         > ul {
           > li {
             list-style-type: none;
             margin-left: 10px;
             font-weight: bold;
-            >   .input-append {
+            .input-append {
               >  input {
                 width: 15px;
                 height: 20px;
@@ -125,7 +129,7 @@ input {
               >  a {
                 padding-bottom: 7px;
               }
-              >  .btn {
+              .btn {
                 width: 35px;
                 height: 17px;
                 border-top-left-radius: 4px;
@@ -162,14 +166,14 @@ input {
 }
 
 .repository {
-  > .main-repo {
-    >  .repo-heading {
+  .main-repo {
+    .repo-heading {
       >  p {
         font-size: 18px;
         .margin(25px,13px);
       }
     }
-    >  .summary {
+    .summary {
       border: @border-color;
       height: 40px;
       width: 780px;
@@ -194,7 +198,7 @@ input {
         }
       }
     }
-    >.file-navigation {
+    .file-navigation {
       >  a {
         font-weight: normal;
         >    b {
@@ -202,7 +206,7 @@ input {
         }
       }
     }
-    >  .files {
+    .files {
       .margin;
       border-top: @border-color;
       border-left: @border-color;
@@ -222,19 +226,19 @@ input {
           }
         }
       }
-      >  .updates {
+      .updates {
         background-color: #e6f1f6;
         padding: 5px;
       }
-      >  .author {
+      .author {
         padding: 5px;
         font-size: 12px;
         color: @muted-color;
       }
-      >  .files-list {
+      .files-list {
         >    table {
           >      tbody {
-              border-top:@border-color;
+            border-top: @border-color;
             >        tr {
               border-bottom: @border-color;
               height: 34px;
