@@ -3,338 +3,16 @@
 <head>
     <meta charset="utf-8">
     <title>vineelal/neo4j-intro-tutorial</title>
+
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link rel="stylesheet/less" href="style.less" type="text/css">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <script src="http://lesscss.googlecode.com/files/less-1.0.21.min.js"></script>
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script src="js/bootstrap.js"></script>
-    <style>
-        img {
-            margin-right: 20px;
-            float: left;
-        }
-
-        a {
-            font-weight: bold;
-            font-size: 12px;
-        }
-
-        input {
-            width: 200px;
-        }
-
-        b {
-            font-size: 12px;
-        }
-
-        .header {
-            padding-top: 15px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #e5e5e5;
-        }
-
-            /*.navbar{margin-top: 20px;}*/
-        .navbar .nav > li > a {
-            float: left;
-            color: black;
-            padding-top: 5px;
-            padding-bottom: 5px;
-        }
-
-        .container {
-            width: 1000px;
-        }
-
-        .buttons > li {
-            list-style-type: none;
-            float: right;
-        }
-
-        .buttons {
-            margin-bottom: 10px;
-        }
-
-        input {
-            font-size: 8px;
-        }
-
-        .buttons > li {
-            margin-left: 10px;
-        }
-
-        .github > a {
-            font-weight: bold;
-            color: #000000;
-            font-size: 30px;
-            margin-right: 30px;
-        }
-
-        .github {
-            padding-top: 5px;
-        }
-
-        .navbar-inner {
-            border: 2px;
-            padding-left: 0;
-            padding-right: 0;
-            margin-left: 10px;
-            padding-bottom: 0;
-        }
-
-        .input-append {
-            margin-bottom: 10px;
-        }
-
-        .navbar {
-            background-color: pink;
-        }
-
-        .main-content .page-header .container > a {
-            font-size: 20px;
-            margin-left: 5px;
-            margin-right: 5px;
-            font-weight: normal;
-        }
-
-        .main-content .page-header .container > b {
-            font-size: 20px;
-            font-weight: normal;
-        }
-
-        .main-content .page-header .container .buttons > ul > li {
-            list-style-type: none;
-            margin-left: 10px;
-            font-weight: bold;
-        }
-
-        .main-content .page-header .container .buttons > ul > li > .input-append > input {
-            width: 15px;
-            height: 20px
-        }
-
-        .main-content .page-header .container .buttons > ul > li > .input-append > a {
-            padding-bottom: 7px;
-        }
-
-        .main-content .page-header .container .buttons > ul > li > .input-append .btn {
-            width: 35px;
-            height: 17px;
-        }
-
-        .page-header {
-            margin: 0;
-            /*padding-bottom: 25px;*/
-            padding-top: 25px;
-        }
-
-        .input-append > input {
-            border-top-left-radius: 0px;
-            border-bottom-left-radius: 0px;
-            font-weight: bolder;
-            padding-left: 9px;
-            border-top-right-radius: 4px;
-            border-bottom-right-radius: 4px;
-            color: #000000;
-        }
-
-        .input-append .btn {
-            border-top-left-radius: 4px;
-            border-bottom-left-radius: 4px;
-        }
-
-        .subscript {
-            font-size: 12px;
-            margin-left: 8px;
-        }
-
-        .footer {
-            margin-bottom: 50px;
-        }
-
-        .footer {
-            font-size: 12px;
-            border-top: 1px solid #e5e5e5;
-            margin-top: 30px;
-            padding-top: 30px
-        }
-
-        .footer > ul >li {
-            float: left;
-            list-style: none;
-        }
-
-        .footer > ul > li > a {
-            margin-left: 15px;
-            font-weight: normal;
-        }
-
-        .repository .main-repo .repo-heading > p {
-            font-size: 18px;
-            margin-top: 25px;
-            margin-bottom: 13px;
-        }
-
-        .repository .main-repo .summary {
-            border: 1px solid #e5e5e5;
-            height: 40px;
-            width: 780px;
-            margin-bottom: 10px;
-        }
-
-        .repository .main-repo .summary > ul > li {
-            list-style-type: none;
-            float: left;
-            margin-right: 35px;
-            margin-left: 55px;
-            padding-top: 10px;
-        }
-
-        .repository .main-repo .summary > ul > li > a {
-            font-size: 15px;
-            font-weight: normal;
-            color: #808080;
-        }
-
-        .repository .main-repo .summary > ul > li > a > i{
-            padding-right: 5px;
-        }
-        .repository .main-repo .summary > ul > li > a > b {
-            color: #000000;
-            font-size: 13px;;
-        }
-
-        .repository .main-repo .file-navigation > a {
-            font-weight: normal;
-        }
-
-        .repository .main-repo .file-navigation > a > b {
-            font-size: 14px;
-        }
-
-        .repository .main-repo .files {
-            margin-top: 10px;
-            margin-bottom: 10px;
-            /*border: 1px solid #e5e5e5;*/
-            border-top: 1px solid #e5e5e5;
-            border-left: 1px solid #e5e5e5 ;
-            border-right: 1px solid #e5e5e5;
-        }
-
-        .repository .main-repo .files .branch-summary >ul > li {
-            margin-left: 10px;
-        }
-
-        .repository .main-repo .files .branch-summary >ul > li > a {
-            color: #808080;
-        }
-
-        .repository .main-repo .files .branch-summary > b {
-            color: #808080;
-        }
-
-        .repository .main-repo .files .branch-summary {
-            border-top: 1px solid #e5e5e5;
-            padding: 5px;
-        }
-
-        .repository .main-repo .files .updates {
-            background-color: #e6f1f6;
-            padding: 5px;
-        }
-
-        .repository .main-repo .files .author {
-            padding: 5px;
-            font-size: 12px;
-            color: #808080;
-        }
-
-            /*.repository .main-repo .files .files-list > table {background-color:graytext;}*/
-        .repository .main-repo .files .files-list > table > tbody > tr {
-            border-bottom: 1px solid #e5e5e5;
-        }
-
-        .repository .main-repo .files .files-list > table > tbody > tr > td {
-            padding: 7px;
-            font-size: 13px;
-        }
-
-        .repository .main-repo .files .files-list > table > tbody > tr > td > a {
-            font-weight: normal;
-        }
-
-        .repository .main-repo .files .files-list > table > tbody > tr > td > a > i{
-            margin-right: 5px;
-        }
-        .repository .main-repo .files .files-list > table > tbody > tr {
-            height: 34px;
-        }
-
-        .repository .main-repo .readme-div {
-            margin-bottom: 10px;
-            margin-top: 10px;
-            border: 1px solid #e5e5e5;
-        }
-
-        code {
-            color: black;
-            font-family: Consolas, "Liberation Mono", Courier, monospace;
-            margin: 0, 2px;
-            padding: 0px, 5px;
-        }
-
-        .repository .main-repo .readme-div .readme > ul > li {
-            margin-top: 15px;
-            margin-left: 15px;
-        }
-
-        .repository .main-repo .readme-div .content {
-            border: 1px solid #CACACA;
-            background-color: #F0F0F0;
-            height: 40px;
-            padding-top: 15px;
-        }
-
-        .repository .main-repo .readme-div .content > b {
-            font-weight: bold;
-            font-size: 17px;
-            margin-left: 5px;
-            margin-top: 15px;
-        }
-
-        .repository .main-repo .readme-div .readme {
-            padding: 15px;
-        }
-
-        .repository .main-repo .readme-div .content > img {
-            margin-left: 10px;
-            margin-bottom: 3px;
-            margin-right: 5px;
-            margin-top: 5px;
-        }
-
-        .sidebar .top-div {
-            margin:20px 0px;
-        }
-        .sidebar .top-div > ul > li
-        {
-            margin:25px 0px;
-        }
-         .sidebar .top-div > ul > li > a {
-            list-style-type: none;
-            font-weight: normal;
-             font-size: 13px;
-
-
-        }
-        .sidebar .top-div > ul > li > a > i{
-            padding-right: 5px;;
-        }
-
-            /*.repository .sidebar {margin-top:10px;margin-bottom: 10px;}*/
-            /*li {padding-top: 10px;padding-bottom: 10px;font:size:14px;font-weight: normal;}*/
-            /*.repository .sidebar .top-div {margin-top: 15px;margin-bottom: 15px;}*/
-        .span10 {
-            margin-left: 0px;
-        }
-    </style>
+    <script type="text/javascript" charset="utf-8">
+        less.watch();
+    </script>
 </head>
 <body>
 <div class="wrapper">
@@ -378,217 +56,222 @@
 </div>
 
 <div class="main-content">
-    <div class="page-header">
-        <!--<p class="muted">public</p>-->
-        <div class="container">
-            <a href="#">vineelal</a><b>/</b><a href="#"><strong>neo4j-intro-tutorial</strong></a>
+<div class="page-header">
+    <!--<p class="muted">public</p>-->
+    <div class="container">
+        <a href="#">vineelal</a><b>/</b><a href="#"><strong>neo4j-intro-tutorial</strong></a>
 
-            <div class="buttons pull-right">
+        <div class="buttons pull-right">
+            <ul>
+                <li class="pull-left">
+                    <div class="input-append">
+                        <a class="btn" href="#">
+                            <b><i class="icon-star"></i>Star</b>
+                        </a>
+                        <input type="text" placeholder="0">
+                    </div>
+                </li>
+                <li class="pull-right">
+                    <div class="input-append">
+                        <a class="btn" href="#">
+                            <b><i class="icon-folder-close"></i> Fork</b>
+                        </a>
+                        <input type="text" placeholder="13">
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="subscript">
+            forked from <a href="#">neo-technology/neo4j-intro-tutorial</a>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="repository">
+        <div class="main-repo span10">
+            <div class="repo-heading">
+                <p class="muted">Introduction to Neo4j and Cypher (Tutorial)</p>
+            </div>
+            <div class="summary pull-left">
                 <ul>
-                    <li class="pull-left">
-                        <div class="input-append">
-                            <a class="btn" href="#">
-                                <b><i class="icon-star"></i>Star</b>
-                            </a>
-                            <input type="text" placeholder="0">
-                        </div>
+                    <li>
+                        <a href="#"><i class="icon-tag"></i><b>21</b> commits</a>
                     </li>
-                    <li class="pull-right">
-                        <div class="input-append">
-                            <a class="btn" href="#">
-                                <b><i class="icon-folder-close"></i> Fork</b>
-                            </a>
-                            <input type="text" placeholder="13">
-                        </div>
+                    <li>
+                        <a href="#"><i class="icon-tags"></i><b>2</b> branches</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="icon-book"></i><b>0</b> releases</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="icon-bookmark"></i><b>4</b> contributors</a>
                     </li>
                 </ul>
             </div>
-            <div class="subscript">
-                forked from <a href="#">neo-technology/neo4j-intro-tutorial</a>
+            <div class="file-navigation">
+                <a href="#" class="btn btn-medium btn-success"><i class="icon-retweet"></i></a>
+                <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+                    branch: <b>master</b>
+                    <span class="caret"></span>
+                </a>
+
+                <a href="#" style="font-size: 20px;font-weight: bold;margin-left: 5px;">neo4j-intro-tutorial</a>
+            </div>
+            <div class="files">
+                <div class="branch-summary">
+                    <b>This branch is 0 commits ahead and 0 commits behind master</b>
+                    <ul class="pull-right" style="list-style-type: none;">
+                        <li class="pull-left">
+                            <a href="#">Pull request</a>
+                        </li>
+                        <li class="pull-right">
+                            <a href="#">Compare</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="updates">
+                    Minor updates
+                </div>
+                <div class="author">
+                    <a href="#" style="color: #000000;"><img src="img/author.jpeg"
+                                                             style="width:24px;height: 24px;margin-right:5px;">cleishm</a>
+                    authored 4 months ago
+                    <a href="#" class="pull-right" style="color: #808080;font-weight: normal">lastest commit
+                        e4df0fa11</a>
+                </div>
+                <div class="files-list">
+                    <table class="files" style="width:780px;">
+                        <tbody>
+                        <tr>
+
+                            <td><a href="#"><i class="icon-folder-close"></i>USB KEY</a></td>
+                            <td class="muted">Output readme.txt to installer output</td>
+                            <td class="muted">4 months ago</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#"><i class="icon-list-alt"></i>.gitattributes</a></td>
+                            <td class="muted">Initial materials</td>
+                            <td class="muted">6 months ago</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#"><i class="icon-list-alt"></i>.gitignore</a></td>
+                            <td class="muted">Initial materials</td>
+                            <td class="muted">6 months ago</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#"><i class="icon-list-alt"></i>Neo4j Intro Tutorial.key</a></td>
+                            <td class="muted">Minor updates</td>
+                            <td class="muted">4 months ago</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#"><i class="icon-list-alt"></i>Neo4j Intro Tutorial.pdf</a></td>
+                            <td class="muted">Minor updates</td>
+                            <td class="muted">4 months ago</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#"><i class="icon-list-alt"></i>Neo4j Intro Tutorial.ppt</a></td>
+                            <td class="muted">Update to match latest .key</td>
+                            <td class="muted">4 months ago</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#"><i class="icon-list-alt"></i>README.md</a></td>
+                            <td class="muted">Rename 'Neo4j Tutorial' to 'Neo4j Intro Tutorial'</td>
+                            <td class="muted">5 months ago</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#"><i class="icon-list-alt"></i>build_usbkey.sh</a></td>
+                            <td class="muted">Use command line args to control update behaviour</td>
+                            <td class="muted">5 months ago</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <div class="readme-div">
+                <!--<div class="container">-->
+                <div class="content">
+                    <img src="img/book1.jpg" width="15px" height="15px"><b>README.md</b>
+                </div>
+                <article class="readme">
+                    <h1>Neo4j Tutorial Trainers Pack</h1>
+                    <hr>
+                    <p>Contents:</p>
+                    <ul>
+                        <li>
+                            <code color="#000">Neo4j Intro Tutorial.key</code> - Keynote presentation (this is the
+                            master).
+                        </li>
+                        <li>
+                            <code>Neo4j Intro Tutorial.ppt</code> - Powerpoint presentation (a manually adjusted
+                            export
+                            from keynote).
+                        </li>
+                        <li>
+                            <code>Neo4j Intro Tutorial.pdf</code> - PDF export of selected slides, to be provided
+                            to students AFTER the tutorial.
+                        </li>
+                        <li>
+                            <code>USBKEY</code> - Contents of this directory should be placed onto USB keys and
+                            supplied to students.
+                        </li>
+                    </ul>
+                    <p>Preparation:</p>
+                    <ul>
+                        <li>Provide students with printouts of the Cypher cheat-sheet, found
+                            in <code>USBKEY/DOCS/Neo4j_CheatSheet_v?.pdf</code>
+                        </li>
+                        <li>Provide students with printouts of the movie graph model, found
+                            in <code>USBKEY/DOCS/movies_model.pdf</code>
+                        </li>
+                        <li>Ensure a whiteboard is available. Ideally, project the presentation onto
+                            the whiteboard, to allow drawing over projected images.
+                        </li>
+                        <li>Ensure it's easy to switch between the presentation slides and using neo4j
+                            to demonstrate the examples. Note that examples can be copy/pasted from the
+                            slides.
+                        </li>
+                        <li>Customise your Keynote presenters display to show a large area for the notes</li>
+                    </ul>
+                </article>
+                <!--</div>-->
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="repository">
-            <div class="main-repo span10">
-                <div class="repo-heading">
-                    <p class="muted">Introduction to Neo4j and Cypher (Tutorial)</p>
-                </div>
-                <div class="summary pull-left">
-                    <ul>
-                        <li>
-                            <a href="#"><i class="icon-tag"></i><b>21</b> commits</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="icon-tags"></i><b>2</b> branches</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="icon-book"></i><b>0</b> releases</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="icon-bookmark"></i><b>4</b> contributors</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="file-navigation">
-                    <a href="#" class="btn btn-medium btn-success"><i class="icon-retweet"></i></a>
-                    <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-                        branch: <b>master</b>
-                        <span class="caret"></span>
-                    </a>
-
-                    <a href="#" style="font-size: 20px;font-weight: bold;margin-left: 5px;">neo4j-intro-tutorial</a>
-                </div>
-                <div class="files">
-                    <div class="branch-summary">
-                        <b>This branch is 0 commits ahead and 0 commits behind master</b>
-                        <ul class="pull-right" style="list-style-type: none;">
-                            <li class="pull-left">
-                                <a href="#">Pull request</a>
-                            </li>
-                            <li class="pull-right">
-                                <a href="#">Compare</a>
-                            </li>
-                        </ul>
-
-                    </div>
-                    <div class="updates">
-                        Minor updates
-                    </div>
-                    <div class="author">
-                        <a href="#" style="color: #000000;"><img src="img/author.jpeg" style="width:24px;height: 24px;margin-right:5px;">cleishm</a> authored 4 months ago
-                        <a href="#" class="pull-right" style="color: #808080;font-weight: normal">lastest commit
-                            e4df0fa11</a>
-                    </div>
-                    <div class="files-list">
-                        <table class="files" style="width:780px;">
-                            <tbody>
-                            <tr>
-
-                                <td><a href="#"><i class="icon-folder-close"></i>USB KEY</a></td>
-                                <td class="muted">Output readme.txt to installer output</td>
-                                <td class="muted">4 months ago</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#"><i class="icon-list-alt"></i>.gitattributes</a></td>
-                                <td class="muted">Initial materials</td>
-                                <td class="muted">6 months ago</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#"><i class="icon-list-alt"></i>.gitignore</a></td>
-                                <td class="muted">Initial materials</td>
-                                <td class="muted">6 months ago</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#"><i class="icon-list-alt"></i>Neo4j Intro Tutorial.key</a></td>
-                                <td class="muted">Minor updates</td>
-                                <td class="muted">4 months ago</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#"><i class="icon-list-alt"></i>Neo4j Intro Tutorial.pdf</a></td>
-                                <td class="muted">Minor updates</td>
-                                <td class="muted">4 months ago</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#"><i class="icon-list-alt"></i>Neo4j Intro Tutorial.ppt</a></td>
-                                <td class="muted">Update to match latest .key</td>
-                                <td class="muted">4 months ago</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#"><i class="icon-list-alt"></i>README.md</a></td>
-                                <td class="muted">Rename 'Neo4j Tutorial' to 'Neo4j Intro Tutorial'</td>
-                                <td class="muted">5 months ago</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#"><i class="icon-list-alt"></i>build_usbkey.sh</a></td>
-                                <td class="muted">Use command line args to control update behaviour</td>
-                                <td class="muted">5 months ago</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                </div>
-                <div class="readme-div">
-                    <!--<div class="container">-->
-                    <div class="content">
-                        <img src="img/book1.jpg" width="15px" height="15px"><b>README.md</b>
-                    </div>
-                    <article class="readme">
-                        <h1>Neo4j Tutorial Trainers Pack</h1>
-                        <hr>
-                        <p>Contents:</p>
-                        <ul>
-                            <li>
-                                <code color="#000">Neo4j Intro Tutorial.key</code> - Keynote presentation (this is the
-                                master).
-                            </li>
-                            <li>
-                                <code>Neo4j Intro Tutorial.ppt</code> - Powerpoint presentation (a manually adjusted
-                                export
-                                from keynote).
-                            </li>
-                            <li>
-                                <code>Neo4j Intro Tutorial.pdf</code> - PDF export of selected slides, to be provided
-                                to students AFTER the tutorial.
-                            </li>
-                            <li>
-                                <code>USBKEY</code> - Contents of this directory should be placed onto USB keys and
-                                supplied to students.
-                            </li>
-                        </ul>
-                        <p>Preparation:</p>
-                        <ul>
-                            <li>Provide students with printouts of the Cypher cheat-sheet, found
-                                in <code>USBKEY/DOCS/Neo4j_CheatSheet_v?.pdf</code>
-                            </li>
-                            <li>Provide students with printouts of the movie graph model, found
-                                in <code>USBKEY/DOCS/movies_model.pdf</code>
-                            </li>
-                            <li>Ensure a whiteboard is available. Ideally, project the presentation onto
-                                the whiteboard, to allow drawing over projected images.
-                            </li>
-                            <li>Ensure it's easy to switch between the presentation slides and using neo4j
-                                to demonstrate the examples. Note that examples can be copy/pasted from the
-                                slides.
-                            </li>
-                            <li>Customise your Keynote presenters display to show a large area for the notes</li>
-                        </ul>
-                    </article>
-                    <!--</div>-->
-                </div>
-            </div>
+    <div class="sidebar span2">
+        <div class="top-div">
+            <ul style="list-style-type: none;font-weight: normal;padding:5px;">
+                <li>
+                    <a href="#" style="color: #000000;font-weight: bold;"><> Code</a>
+                </li>
+                <li>
+                    <a href="#"><i class="icon-random"></i>Pull Requests</a>
+                </li>
+                <li>
+                    <a href="#"><i class="icon-list-alt"></i>Wiki</a>
+                </li>
+                <li>
+                    <a hef="#"><i class=" icon-move"></i>Pulse</a>
+                </li>
+                <li>
+                    <a href="#"><i class="icon-signal"></i>Graphs</a>
+                </li>
+                <li>
+                    <a href="#"><i class="icon-retweet"></i>Network</a>
+                </li>
+            </ul>
         </div>
-        <div class="sidebar span2">
-            <div class="top-div">
-                <ul style="list-style-type: none;font-weight: normal;padding:5px;">
-                    <li>
-                        <a href="#" style="color: #000000;font-weight: bold;"><> Code</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="icon-random"></i>Pull Requests</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="icon-list-alt"></i>Wiki</a>
-                    </li>
-                    <li>
-                        <a hef="#"><i class=" icon-move"></i>Pulse</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="icon-signal"></i>Graphs</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="icon-retweet"></i>Network</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="bottom-div">
-                <div class="clone-url">
+        <div class="bottom-div">
+            <div class="clone-url">
                 <h10 style="font-size: 12px;"><b>HTTPS</b> clone URL</h10>
-                    <input type="text" placeholder="https://github.com/vineelal/neo4j-intro-tutorial.git" style="width:140px;">
+                <input type="text" placeholder="https://github.com/vineelal/neo4j-intro-tutorial.git"
+                       style="width:140px;">
             </div>
-                <p style="font-size: 10px;">You can clone with <a href="#" style="font-weight: normal;">HTTPS</a>, or <a href="#" style="font-weight: normal;">Subversion</a>.<i class="icon-question-sign" style="margin-bottom: 2px;"></i></p>
-                <input class="btn" style="font-size: 12px;width:140px;font-weight: bold;"value="Download ZIP" />
+            <p style="font-size: 10px;">You can clone with <a href="#" style="font-weight: normal;">HTTPS</a>, or <a
+                    href="#" style="font-weight: normal;">Subversion</a>.<i class="icon-question-sign"
+                                                                            style="margin-bottom: 2px;"></i></p>
+            <input class="btn" style="font-size: 12px;width:140px;font-weight: bold;" value="Download ZIP"/>
         </div>
 
 

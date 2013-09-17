@@ -1,0 +1,246 @@
+img {
+  margin-right: 20px;
+  float: left;
+}
+a {
+  font-weight: bold;
+  font-size: 12px;
+}
+.input-append input {
+  width: 200px;
+  border-radius: 0px 4px 4px 0px;
+}
+b {
+  font-size: 12px;
+}
+.header {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.navbar .navbar-inner .container > ul > li > a {
+  float: left;
+  color: black;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.container {
+  width: 1000px;
+}
+.buttons {
+  margin-bottom: 10px;
+}
+.buttons > li {
+  list-style-type: none;
+  margin-left: 10px;
+  float: right;
+}
+input {
+  font-size: 8px;
+}
+.github {
+  padding-top: 5px;
+}
+.github > a {
+  font-size: 30px;
+  font-weight: bold;
+  color: #000000;
+  margin-right: 30px;
+}
+.navbar-inner {
+  border: 2px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: 10px;
+  padding-bottom: 0;
+}
+.input-append {
+  margin-bottom: 10px;
+}
+.main-content > .page-header > .container > .subscript {
+  font-size: 12px;
+  margin-left: 8px;
+}
+.main-content > .page-header > .container > a {
+  font-size: 20px;
+  font-weight: normal;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.main-content > .page-header > .container > b {
+  font-size: 20px;
+  font-weight: normal;
+}
+.main-content > .page-header > .container > .buttons > ul > li {
+  list-style-type: none;
+  margin-left: 10px;
+  font-weight: bold;
+}
+.main-content > .page-header > .container > .buttons > ul > li > .input-append > input {
+  width: 15px;
+  height: 20px;
+  border-radius: 0px 4px 4px 0px;
+  font-weight: bolder;
+  padding-left: 9px;
+  color: #000000;
+}
+.main-content > .page-header > .container > .buttons > ul > li > .input-append > a {
+  padding-bottom: 7px;
+}
+.main-content > .page-header > .container > .buttons > ul > li > .input-append > .btn {
+  width: 35px;
+  height: 17px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.page-header {
+  margin: 0;
+  padding-top: 25px;
+}
+.footer {
+  font-size: 12px;
+  border-top: 1px solid #e5e5e5;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  padding-top: 30px;
+}
+.footer > ul > li {
+  float: left;
+  list-style: none;
+}
+.footer > ul > li > a {
+  margin-left: 15px;
+  font-weight: normal;
+}
+.repository > .main-repo > .repo-heading > p {
+  font-size: 18px;
+  margin-top: 25px;
+  margin-bottom: 13px;
+}
+.repository > .main-repo > .summary {
+  border: 1px solid #e5e5e5;
+  height: 40px;
+  width: 780px;
+  margin-bottom: 10px;
+}
+.repository > .main-repo > .summary > ul > li {
+  list-style-type: none;
+  float: left;
+  margin-left: 55px;
+  margin-right: 35px;
+  padding-top: 10px;
+}
+.repository > .main-repo > .summary > ul > li > a {
+  font-size: 15px;
+  font-weight: normal;
+  color: #808080;
+}
+.repository > .main-repo > .summary > ul > li > a > i {
+  padding-right: 5px;
+}
+.repository > .main-repo > .summary > ul > li > a > b {
+  color: #000000;
+  font-size: 13px;
+}
+.repository > .main-repo > .file-navigation > a {
+  font-weight: normal;
+}
+.repository > .main-repo > .file-navigation > a > b {
+  font-size: 14px;
+}
+.repository > .main-repo > .files {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-top: 1px solid #e5e5e5;
+  border-left: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
+}
+.repository > .main-repo > .files .branch-summary {
+  border-top: 1px solid #e5e5e5;
+  padding: 5px;
+}
+.repository > .main-repo > .files .branch-summary > b {
+  color: #808080;
+}
+.repository > .main-repo > .files .branch-summary > ul > li {
+  margin-left: 10px;
+}
+.repository > .main-repo > .files .branch-summary > ul > li > a {
+  color: #808080;
+}
+.repository > .main-repo > .files > .updates {
+  background-color: #e6f1f6;
+  padding: 5px;
+}
+.repository > .main-repo > .files > .author {
+  padding: 5px;
+  font-size: 12px;
+  color: #808080;
+}
+.repository > .main-repo > .files > .files-list > table > tbody {
+  border-top: 1px solid #e5e5e5;
+}
+.repository > .main-repo > .files > .files-list > table > tbody > tr {
+  border-bottom: 1px solid #e5e5e5;
+  height: 34px;
+}
+.repository > .main-repo > .files > .files-list > table > tbody > tr > td {
+  padding: 7px;
+  font-size: 13px;
+}
+.repository > .main-repo > .files > .files-list > table > tbody > tr > td > a {
+  font-weight: normal;
+}
+.repository > .main-repo > .files > .files-list > table > tbody > tr > td > a > i {
+  margin-right: 5px;
+}
+.repository > .main-repo .readme-div {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #e5e5e5;
+}
+.repository > .main-repo .readme-div .content {
+  border: 1px solid #CACACA;
+  background-color: #F0F0F0;
+  height: 40px;
+  padding-top: 15px;
+}
+.repository > .main-repo .readme-div .content > b {
+  font-size: 17px;
+  font-weight: bold;
+  margin-left: 5px;
+  margin-top: 15px;
+}
+.repository > .main-repo .readme-div .content > img {
+  margin: 5px 5px 3px 10px;
+}
+.repository > .main-repo .readme-div .readme {
+  padding: 15px;
+}
+.repository > .main-repo .readme-div .readme > ul > li {
+  margin-top: 15px;
+  margin-left: 15px;
+}
+code {
+  color: black;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  margin: 0, 2px;
+  padding: 0px, 5px;
+}
+.sidebar .top-div {
+  margin: 20px 0px;
+}
+.sidebar .top-div ul li {
+  margin: 25px 0px;
+}
+.sidebar .top-div ul li a {
+  list-style-type: none;
+  font-size: 13px;
+  font-weight: normal;
+}
+.sidebar .top-div ul li a i {
+  padding-right: 5px;
+}
+.span10 {
+  margin-left: 0px;
+}

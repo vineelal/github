@@ -4,13 +4,21 @@
     <title>vineelal/neo4j-intro-tutorial</title>
     <style>
 
-        a{
-            text-decoration:none;
-            color:#0480be;
+        a {
+            text-decoration: none;
+            color: #0480be;
         }
 
-        input{
-            border:1px solid #ddd;
+        .wrapper .header .container a:hover {
+            color: #0480be;
+        }
+
+        .wrapper .header .container .nav-bar li a:hover {
+            color: #0480be;
+        }
+
+        input {
+            border: 1px solid #ddd;
         }
 
         .container {
@@ -40,15 +48,16 @@
             display: inline;
         }
 
-        .input-append > button{
+        .input-append > button {
             border-bottom-right-radius: 0px;
             border-top-right-radius: 0px;
         }
 
         .input-append > input {
-            border-top-right-radius:4px;
-            border-bottom-right-radius:4px;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
         }
+
         .nav-bar {
             display: inline;
             /*position: absolute;*/
@@ -71,20 +80,20 @@
             color: #000000;
         }
 
-        button{
+        button {
             width: 80px;
-            height:30px;
+            height: 30px;
             font-weight: bold;
             border: 1px solid #ddd;
             border-radius: 4px;
         }
 
-        .primary-button{
+        .primary-button {
             background-color: #60b044;
             color: #ffffff;
         }
 
-        .page-header .header > .container > a{
+        .page-header .header > .container > a {
             font-size: 25px;
         }
 
@@ -121,41 +130,49 @@
                 </ul>
             </div>
             <!--<div class="buttons">-->
-                <div class="nav-bar" style="float:right;margin-top:-19px;">
-                    <ul>
-                        <li>
-                            <button class="primary-button" value="Sign up">Sign up</button>
-                        </li>
-                        <li>
-                            <button type="button" value="Sign In">Sign In</button>
-                        </li>
-                    </ul>
+            <div class="nav-bar" style="float:right;margin-top:-19px;">
+                <ul>
+                    <li>
+                        <button class="primary-button" value="Sign up">Sign up</button>
+                    </li>
+                    <li>
+                        <button type="button" value="Sign In">Sign In</button>
+                    </li>
+                </ul>
                 <!--</div>-->
             </div>
         </div>
     </div>
     <div class="page-header">
         <div class="header">
+            <div style="float: left;margin-left:40px;margin-top: 10px;font-size: 12px;color: #b9b9b9;">PUBLIC</div>
+
             <div class="container">
-                <a href="#">vineelal </a><b style="font-size:25px;">/</b><a href="#"><b> neo4j-intro-tutorial</b></a>
+                <img src="img/book.png" style="float: left;margin-right:10px;">
+                <a href="#">vineelal</a><b style="font-size:25px;">/</b><a href="#"><b> neo4j-intro-tutorial</b></a>
 
                 <div class="nav-bar" style="float:right;">
                     <ul>
                         <li>
                             <div class="input-append">
-                                <button type="button" style="padding-bottom:3px;"><img src="img/star.png" style="width:15px;height:15px;margin-right:3px;">Star</button>
+                                <button type="button" style="padding-bottom:3px;"><img src="img/star.png"
+                                                                                       style="width:15px;height:15px;margin-right:3px;">Star
+                                </button>
                                 <input type="text" value="10" style="width:20px;">
                             </div>
                         </li>
                         <li>
                             <div class="input-append">
-                                <button type="button"><img src="img/git_branch.png" style="width:15px;height:15px;margin-right:3px;">Fork</button>
+                                <button type="button"><img src="img/git_branch.png"
+                                                           style="width:15px;height:15px;margin-right:3px;">Fork
+                                </button>
                                 <input type="text" value="13" style="width:20px;">
                             </div>
                         </li>
                     </ul>
                 </div>
-                <sub><p style="margin: 0;">forked from <a href="#">neo-technology/neo4j-intro-tutorial</a></p></sub>
+                <sub><p style="margin: 0;margin-left:35px;">forked from <a
+                        href="#">neo-technology/neo4j-intro-tutorial</a></p></sub>
             </div>
         </div>
     </div>
